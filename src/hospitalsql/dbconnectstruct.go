@@ -5,11 +5,11 @@ import (
 )
 
 /**
- * 定义Person类
+ * 定义DbConnectStruct类
  */
 type DbConnectStruct struct {
-	IsOpen bool
-	Db     *sql.DB
+	DbStatus int
+	Db       *sql.DB
 }
 
 /**
@@ -23,10 +23,10 @@ func (this *DbConnectStruct) GetDb() *sql.DB {
 	return this.Db
 }
 
-func (this *DbConnectStruct) SetIsOpen(value bool) {
-	this.IsOpen = value
+func (this *DbConnectStruct) SetDbStatus(value int) {
+	this.DbStatus = value
 }
 
-func (this *DbConnectStruct) GetIsOpen() bool {
-	return this.IsOpen
+func (this *DbConnectStruct) GetDbStatus() int {
+	return this.DbStatus
 }
